@@ -1,0 +1,32 @@
+﻿<Application x:Class="Kaspersky.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Kaspersky"
+             xmlns:viewModels="clr-namespace:Kaspersky.MVVM.ViewModels"
+             xmlns:view="clr-namespace:Kaspersky.MVVM.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/WindowButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ReferentialTextBlockTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TitleMenuItemTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DescriptionMenuItemTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:SecurityViewModel}">
+                <view:SecurityView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:MyNetworkViewModel}">
+                <view:MyNetworkView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:ManagementViewModel}">
+                <view:ManagementView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:CleaningOptimizationViewModel}">
+                <view:CleaningOptimizationView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

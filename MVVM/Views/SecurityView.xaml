@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Kaspersky.MVVM.Views.SecurityView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kaspersky.MVVM.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Image Source="/Resources/security.png" Width="250" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+
+        <StackPanel Margin="30,10,30,10" Width="230" HorizontalAlignment="Left">
+            <Grid  Margin="0,12,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/cloud.png" Grid.Column="0" Width="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="10,0,0,0">
+                    <TextBlock Text="Облачная защита" VerticalAlignment="Center" Style="{StaticResource TitleMenuItemTheme}"/>
+                    <TextBlock Text="Доступ к облачной базе данных помогает мгновенно выявить опасность." VerticalAlignment="Center" Style="{StaticResource DescriptionMenuItemTheme}"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid  Margin="0,12,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/quarantine.png" Grid.Column="0" Width="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="10,0,0,0">
+                    <TextBlock Text="Карантин" VerticalAlignment="Center" Style="{StaticResource TitleMenuItemTheme}"/>
+                    <TextBlock Text="Хранит файлы, измененные или удаленные во время лечения." VerticalAlignment="Center" Style="{StaticResource DescriptionMenuItemTheme}"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid  Margin="0,12,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/keyboard.png" Grid.Column="0" Width="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="10,0,0,0">
+                    <TextBlock Text="Экранная клавиатура" VerticalAlignment="Center" Style="{StaticResource TitleMenuItemTheme}"/>
+                    <TextBlock Text="Защищает данные от перехвата клавиатурными шпионами." VerticalAlignment="Center" Style="{StaticResource DescriptionMenuItemTheme}"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid  Margin="0,12,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Resources/disk.png" Grid.Column="0" Width="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="10,0,0,0">
+                    <TextBlock Text="Kaspersky Rescue Disk" VerticalAlignment="Center" Style="{StaticResource TitleMenuItemTheme}"/>
+                    <TextBlock Text="Лечит критически зараженный компьютер в момент загрузки операционной системы." VerticalAlignment="Center" Style="{StaticResource DescriptionMenuItemTheme}"/>
+                </StackPanel>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
